@@ -2,10 +2,6 @@
 
 Rise up to Technoscape 2023. There would be a bunch of experience made in this year. And of course, a bunch of homeworks to be solved, a.k.a. features and bugs. So, keep brave yourself, stay curious, and ask for help. And Fighting!
 
-## Setting Up
-
-To make web developing easier, we would do basic life skills of developers, copying and pasting. And of course, using another developer's modules to patch everything up, and well using every solved questions popping in stackoverflow. In conclusion... don't be shy to add something else not listed here... or using another thing we may never know. Suprise us.
-
 So here is the list...
 
 **Backbone**
@@ -45,11 +41,6 @@ import * as postprocessing from 'https://cdn.jsdelivr.net/npm/postprocessing@6.2
 ```
 
 - Model Viewer: https://modelviewer.dev/
-
-
-*P.s. We would use postcss as css preprocessor. As long as CDN exists, please use it first. Put everything on server would be hard. Also, don't forget to update this document if you use any CDN not listed above.* \
-*P.s. List of CDN could be found in the notes at the end of this documentation.* \
-*P.s. 3D Asset modules will follow DnD creativity.*
 
 ## Installation
 
@@ -115,21 +106,6 @@ $ ngrok http <port>
 # example
 $ ngrok http 8000
 ```
-
-## Program Workflow
-
-We already have functional requirement document (FRD) which would be your base in build the web. Please read this first: \
-https://docs.google.com/document/d/1EHvv8X8cDJaF9uN81NnpvOlQRwariQEPcWFoWMdmb9Y/edit?usp=sharing
-
-In developing the web, you would put full of your attention to the design. We would using Figma to make everything easier. Here is the link: \
-https://www.figma.com/file/AiWdCnxikaS2t1Xh5grVjQ/TechnoScape-2023-Website?node-id=0%3A1&t=knyoTXn3DeFRjluf-1
-
-The frontend need to be intgrated to backend for fully functionally use. Usually, backend dev would integrate everything in MVC model. Afterthat, frontend dev could start patching the HTML directly from the backend environtment. Guidance for integration could be found in their repository. Here is it... \
-https://github.com/RnDBNCC/TechnoScape2023-BE
-
-*You may not be informed when the design, content, or FRD updated. That's why you must put your attention to each document... or you just ask your friends who are DnD, Event, or Publication. Communication is the key!*
-
-*Oh, hey! You could also ask us too...*
 
 ## Semantic and Standarization
 
