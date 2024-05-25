@@ -1,0 +1,26 @@
+<svg width="1512" height="1118" viewBox="0 0 1512 1118" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_3)">
+<rect width="1512" height="1118" fill="url(#paint0_radial_1_3)"/>
+<g opacity="0.8">
+<line x1="513" y1="76.1949" x2="2596.31" y2="76.1947" stroke="#1D1D1D" stroke-opacity="0.8" stroke-width="1.92899" stroke-dasharray="19.29 19.29"/>
+<line x1="513" y1="461.992" x2="2596.31" y2="461.991" stroke="#1D1D1D" stroke-opacity="0.8" stroke-width="1.92899" stroke-dasharray="19.29 19.29"/>
+<line x1="513" y1="654.892" x2="2596.31" y2="654.891" stroke="#363636" stroke-opacity="0.4" stroke-width="1.92899" stroke-dasharray="9.64 9.64"/>
+<line x1="513" y1="269.095" x2="2596.31" y2="269.095" stroke="#363636" stroke-opacity="0.4" stroke-width="1.92899" stroke-dasharray="9.64 9.64"/>
+<line x1="513" y1="847.79" x2="2596.31" y2="847.79" stroke="#1D1D1D" stroke-opacity="0.8" stroke-width="1.92899" stroke-dasharray="19.29 19.29"/>
+<line x1="513" y1="1040.69" x2="2596.31" y2="1040.69" stroke="#363636" stroke-opacity="0.4" stroke-width="1.92899" stroke-dasharray="9.64 9.64"/>
+<line x1="1322.21" y1="-4.17726e-08" x2="1322.21" y2="2083.31" stroke="#1D1D1D" stroke-opacity="0.8" stroke-width="1.92899" stroke-dasharray="19.29 19.29"/>
+<line x1="1129.31" y1="-4.17726e-08" x2="1129.31" y2="2083.31" stroke="#363636" stroke-opacity="0.4" stroke-width="1.92899" stroke-dasharray="9.64 9.64"/>
+<line x1="936.413" y1="-4.17726e-08" x2="936.413" y2="2083.31" stroke="#1D1D1D" stroke-opacity="0.8" stroke-width="1.92899" stroke-dasharray="19.29 19.29"/>
+<line x1="743.514" y1="-4.17726e-08" x2="743.514" y2="2083.31" stroke="#363636" stroke-opacity="0.4" stroke-width="1.92899" stroke-dasharray="9.64 9.64"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-272.5 559) scale(11550 20246.6)">
+<stop stop-color="#010101"/>
+<stop offset="1" stop-color="#454545"/>
+</radialGradient>
+<clipPath id="clip0_1_3">
+<rect width="1512" height="1118" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoScape 2023</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/logo/favicon.png">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Splide -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
+    "></script>
+
+    <!-- es-module-shims -->
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- CSS -->
+    <link href="css/base/build.css" rel="stylesheet">
+    <link href="css/base/base.css" rel="stylesheet">
+    <link href="css/hackathon.css" rel="stylesheet">
+</head>
+
+<body class="bg-tcBackground bg-[length:100%_auto]">
+    <!-- Navbar for Web -->
+    <nav class="bg-[#000000] hidden fixed top-0 w-screen lg:flex items-center justify-between px-[100px] py-[30px] border-b-[1px] border-b-[#FFFFFF66] z-30 text-cWhite transition-all"
+        id="web-nav">
+        <a href="#">
+            <img class="w-20" src="./assets/logo/technoscape-logo-small.svg" alt="technoscape-logo" />
+        </a>
+        <ul class="flex items-center gap-14 font-YSDarkSemiBold text-lg">
+            <li class="group relative">
+                <a href="#">
+                    <span class="group-hover:-translate-y-2 transition-all inline-block ">Techno
+                        Conference</span>
+                    <span
+                        class="absolute left-0 right-0 mx-auto -bottom-2 w-0 h-1 bg-taLinearGradient transition-all group-hover:w-[70px] rounded-full group-hover:shadow-[0px_0px_6px_1px_#FFFD96B3]"></span>
+                </a>
+            </li>
+            <li class="group relative">
+                <a href="#">
+                    <span class="group-hover:-translate-y-2 transition-all inline-block">Techno
+                        Academy</span>
+                    <span
+                        class="absolute left-0 right-0 mx-auto -bottom-2 w-0 h-1 bg-taLinearGradient transition-all group-hover:w-[70px] rounded-full group-hover:shadow-[0px_0px_6px_1px_#FFFD96B3]"></span>
+                </a>
+            </li>
+            <li class="group relative">
+                <a href="#">
+                    <span class="group-hover:-translate-y-2 transition-all inline-block -translate-y-2">Hackathon
+                        6.0</span>
+                    <span
+                        class="absolute left-0 right-0 mx-auto -bottom-2 w-[70px] h-1 bg-hackLinearGradient transition-all group-hover:w-[70px] rounded-full group-hover:shadow-[0px_0px_6px_1px_#246FFFB3] shadow-[0px_0px_6px_1px_#246FFFB3]"></span>
+                </a>
+            </li>
+        </ul>
+        <button
+            class="sign-in-btn font-YSDarkSemiBold text-lg border-2 border-cWhite pt-1 pb-2 px-10 rounded-full transition-colors hover:bg-cWhite hover:text-cBlack">
+            Sign In
+        </button>
+    </nav>
+    <!-- Navbar for Mobile -->
+    <nav class="flex fixed top-0 w-screen bg-[#000000] z-20 lg:hidden justify-between px-8 py-8 md:px-14 font-YSDarkMedium text-lg text-cTextBlack border-b-[1px] border-b-[#FFFFFF66] transition-all"
+        id="mob-nav">
+        <a href="#">
+            <img src="./assets/logo/technoscape-logo-small.svg" alt="technoscape-logo" class="w-14 md:w-16" />
+        </a>
+        <button id="navToggler">
+            <img src="./assets/navbar/circle-hamburger.svg" class="w-10 md:w-12" alt="burger-button" />
+        </button>
+        <div id="navMobile"
+            class="backdrop-blur-[1rem] fixed h-screen right-0 top-0 py-9 md:py-10 px-8 md:px-16 z-30 text-cWhite hidden bg-[#000000BF]">
+            <img src="./assets/navbar/icon-x.svg" alt="X-Button" class="ml-auto w-10 mb-14" id="xButtonNav" />
+            <ul class="space-y-12 md:space-y-20 text-sm pr-9 pl-0 md:text-2xl md:pr-20 md:pl-4">
+                <li class="group relative w-fit">
+                    <a href="#">
+                        <span>Techno
+                            Conference</span>
+                        <span
+                            class="absolute left-0 -bottom-4 w-0 h-1 bg-taLinearGradient transition-all group-hover:w-full rounded-full group-hover:shadow-[0px_0px_6px_1px_#FF6E6EB3]"></span>
+                    </a>
+                </li>
+                <li class="group relative w-fit">
+                    <a href="#">
+                        <span>Techno
+                            Academy</span>
+                        <span
+                            class="absolute left-0 -bottom-4 w-0 h-1 bg-taLinearGradient transition-all group-hover:w-full rounded-full group-hover:shadow-[0px_0px_6px_1px_#FFFD96B3]"></span>
+                    </a>
+                </li>
+                <li class="group relative w-fit">
+                    <a href="#">
+                        <span>Hackathon
+                            6.0</span>
+                        <span
+                            class="absolute left-0 -bottom-4 w-full h-1 bg-tcLinearGradient transition-all rounded-full shadow-[0px_0px_6px_1px_#246FFFB3]"></span>
+                    </a>
+                </li>
+            </ul>
+            <button
+                class="sign-in-btn border py-2 px-10 md:py-4 rounded-lg md:rounded-2xl w-full mt-80 md:mt-[30rem] mx-auto text-sm md:text-2xl">
+                Sign In
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div id="hero"
+        class="tc-container flex justify-center items-center text-cWhite pt-44 md:pt-56 lg:pt-60 xl:pt-64 pb-32 lg:pb-48 xl:pb-72 2xl:pb-96 relative bg-[url('/public/assets/techno-conference/hero/hero-bg.png')] bg-[length:100%_auto]">
+        <div class="flex flex-col items-start justify-center gap-4 lg:gap-6 xl:gap-8 z-[2] w-full">
+            <img src="./assets/techno-conference/hero/ts-x-platinum.png" alt="technoscape x platinum sponsor">
+            <h1 class="leading-tight font-ABigDeal text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">HACKATHON 6.0</h1>
+            <span class="tc-subtitle leading-relaxed font-YSDarkRegular">Develop Inventive Solutions and Produce Them into Code
+                <br> 13 Juli 2023 - 17 Juli 2023</span>
+
+            <a href="#" class="tc-button-blue mt-4">Register
+                Here!</a>
+        </div>
+        <img src="/public/assets/techno-conference/hero/liquid.png" alt="blue blob"
+            class="absolute right-0 bottom-[-480px] z-[1] w-[16rem] md:w-[20rem] lg:w-[32rem] xl:w-[36rem] 2xl:w-[48rem] pointer-events-none">
+        <div id="mascot-1"
+            class="absolute -right-8 sm:-right-4 lg:right-8 xl:right-20 2xl:right-24 -bottom-8 sm:-bottom-6 lg:bottom-4 xl:bottom-16 2xl:bottom-20 object iora h-[250px] sm:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[500px] w-[250px] sm:w-[300px] xl:w-[400px] 2xl:w-[500px] scale-75 lg:scale-[0.8] xl:scale-95 2xl:scale-95 z-10"
+            data-value="1"></div>
+    </div>
+
+    <!-- About -->
+    <div
+        class="tc-container flex flex-col items-start justify-center gap-8 text-cWhite pt-32 sm:pt-36 md:pt-40 lg:pt-48 xl:pt-60 2xl:pt-68 pb-16 relative z-[2]">
+
+        <img src="./assets/techno-conference/about/about-bg.png" alt="about-background"
+            class="absolute -z-10 top-0 left-0 right-0 mx-auto w-full h-4/5">
+
+        <img src="./assets/techno-conference/about/tape.svg" alt="tape"
+            class="absolute -top-6 sm:-top-8 md:-top-10 lg:-top-12 xl:-top-14 2xl:-top-16 left-8 w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-auto animate-float-slow">
+
+        <div class="flex flex-col justify-center items-start gap-2 lg:gap-4 xl:gap-8">
+            <h1 class="tc-title leading-tight text-start">ABOUT HACKATHON 6.0</h1>
+            <p class="tc-subtitle leading-relaxed text-justify font-YSDarkRegular">
+                Hackathon 6.0 merupakan puncak dari TechnoScape berupa kompetisi coding secara offline selama 48 jam, di mana setiap tim bersaing untuk membuat aplikasi atau situs web inovatif yang dapat memecahkan permasalahan di kehidupan nyata. Peserta berkesempatan untuk berinteraksi dengan para mentor dalam sesi mentoring bisnis, teknologi, dan desain.
+            </p>
+        </div>
+        <!-- Download Guidebook -->
+        <a href="./assets/logo/technoscape-logo.svg" class="tc-button-blue self-center mt-2"
+            download="Guidebook">Guidebook</a>
+
+        <img src="./assets/techno-conference/about/tape2.svg" alt="tape"
+            class="absolute top-[38rem] sm:top-[30rem] md:top-[31rem] lg:top-[44rem] xl:top-[54rem] 2xl:top-[40rem] right-[2rem] w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-auto animate-float-slow">
+
+        <img src="./assets/techno-conference/about/img_about_banner.png" alt="about-image"
+            class="self-center mt-2 sm:mt-4 md:mt-5 lg:mt-6 xl:mt-8">
+
+    </div>
+
+    <!-- prize -->
+    <div id="prize" class="w-full flex flex-col mt-[4.25rem]">
+        <div
+            class="flex flex-col gap-8 lg:gap-10 xl:gap-12 justify-center items-center text-cWhite z-[2] w-full px-4 lg:px-8 xl:px-16 xl:mb-16 mb-8">
+            <h1 class="leading-tight font-ABigDeal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">TOTAL PRIZES
+            </h1>
+            <h1 class="leading-tight font-ABigDeal text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">RP 7.000.000
+            </h1>
+        </div>
+        <div class="hidden md:display_prize flex flex-row justify-evenly w-full sm:flex">
+            <div class="box flex flex-col w-1/4 xl:gap-9 lg:gap-8 md:gap-7 sm:gap-6 justify-end">
+                <img class="mb-2" src="./assets/techno-conference/prize/silver trophy and sparkles.png" alt="">
+                <div class="border md:border-[4px] sm:border-[3px] border-cWhite rounded-xl xl:px-7 xl:py-4 lg:px-5 lg:py-4 md:px-5 md:py-3 sm:px-5 sm:py-3 flex justify-center">
+                    <div class="flex flex-col xl:gap-4">
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/money.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Rp 2.000.000</p>
+                        </div>
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/merch.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Merchandise</p>
+                        </div>
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/certificate.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box flex flex-col w-1/4 xl:gap-9 lg:gap-8 md:gap-7 sm:gap-6 justify-end">
+                <img class="mb-3" src="./assets/techno-conference/prize/gold trophy and sparkles.png" alt="">
+                <div class="border md:border-[4px] sm:border-[3px] border-cWhite rounded-xl xl:px-7 xl:py-4 lg:px-5 lg:py-4 md:px-5 md:py-3 sm:px-5 sm:py-3 flex justify-center">
+                    <div class="flex flex-col xl:gap-4">
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/money.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Rp 4.000.000</p>
+                        </div>
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/merch.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Merchandise</p>
+                        </div>
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/certificate.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box flex flex-col w-1/4 xl:gap-9 lg:gap-8 md:gap-7 sm:gap-6 justify-end">
+                <img class="mb-1" src="./assets/techno-conference/prize/bronze trophy.png" alt="">
+                <div class="border md:border-[4px] sm:border-[3px] border-cWhite rounded-xl xl:px-7 xl:py-4 lg:px-5 lg:py-4 md:px-5 md:py-3 sm:px-3 sm:py-3 flex justify-center">
+                    <div class="flex flex-col xl:gap-4">
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/money.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Rp 2.000.000</p>
+                        </div>
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/merch.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Merchandise</p>
+                        </div>
+                        <div class="flex flex-row xl:gap-4 lg:gap-2 md:gap-2 sm:gap-1 items-center">
+                            <img class="flex content-center items-center xl:w-8 lg:w-[26px] md:w-5 sm:w-4" src="./assets/techno-conference/prize/certificate.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tampilan mobile -->
+        <div class="sm:hidden flex flex-col justify-evenly w-full items-center gap-9">
+            <div class="box flex flex-row w-full justify-around items-center">
+                <img class="mb-2 w-[11rem]" src="./assets/techno-conference/prize/gold trophy and sparkles.png" alt="">
+                <div class="border border-[3px] border-cWhite rounded-xl px-5 py-3 flex justify-around">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/money.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Rp 4.000.000</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/merch.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Merchandise</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/certificate.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box flex flex-row w-full justify-around items-center">
+                <img class="mb-2 w-[12rem]" src="./assets/techno-conference/prize/silver trophy and sparkles.png" alt="">
+                <div class="border border-[3px] border-cWhite rounded-xl px-5 py-3 flex justify-around">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/money.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Rp 2.000.000</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/merch.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Merchandise</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/certificate.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box flex flex-row w-full justify-around items-center">
+                <img class="mb-2 w-[12rem]" src="./assets/techno-conference/prize/bronze trophy.png" alt="">
+                <div class="border border-[3px] border-cWhite rounded-xl px-5 py-3 flex justify-around">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/money.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Rp 2.000.000</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/merch.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Merchandise</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center">
+                            <img class="flex content-center items-center w-4" src="./assets/techno-conference/prize/certificate.png" alt="">
+                            <p class="tc-subtitle leading-relaxed font-YSDarkRegular text-cWhite">Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Highlights -->
+    <div id="highlight"
+        class="tc-container flex justify-center items-center pt-24 md:pt-32 lg:pt-48 xl:pt-64 pb-0 lg:pb-4 xl:pb-8 relative">
+        <div
+            class="flex flex-col gap-8 lg:gap-10 xl:gap-12 justify-center items-center text-cWhite z-[2] w-full px-4 lg:px-8 xl:px-16">
+            <h1 class="leading-tight font-ABigDeal text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">HIGHLIGHTS
+            </h1>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-row items-center justify-center pb-9 py-4">
+        <div class="w-[80%] justify-around flex flex-row">
+            <span id="highlight-tab-day-1" class="tc-highlight-tab">
+                <img class="rounded-[20px]" src="./assets/techno-conference/highlight/hack1.png" alt="">
+            </span>
+            <span id="highlight-tab-day-2" class="tc-highlight-tab hack-highlight-tab-active">
+                <img class="rounded-[20px]" src="./assets/techno-conference/highlight/hack2.png" alt="">
+            </span>
+            <span id="highlight-tab-day-3" class="tc-highlight-tab">
+                <img class="rounded-[20px]" src="./assets/techno-conference/highlight/hack3.png" alt="">
+            </span>
+            <span id="highlight-tab-day-4" class="tc-highlight-tab">
+                <img class="rounded-[20px]" src="./assets/techno-conference/highlight/hack4.png" alt="">
+            </span>
+            <span id="highlight-tab-day-5" class="tc-highlight-tab">
+                <img class="rounded-[20px]" src="./assets/techno-conference/highlight/hack5.png" alt="">
+            </span>
+        </div>
+            
+    </div>
+<!-- 
+    <div class=" swiper highlightSwiper pb-40">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./assets/techno-conference/highlight/highlight-1.png" alt="highlight-1" />
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/techno-conference/highlight/highlight-2.png" alt="highlight-2" />
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/techno-conference/highlight/highlight-3.png" alt="highlight-3" />
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/techno-conference/highlight/highlight-4.png" alt="highlight-4" />
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/techno-conference/highlight/highlight-5.png" alt="highlight-5" />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div> -->
+
+    <!-- hack 1 -->
+    <div style="display: none;" id="highlight-content-day-1" class="tc-highlight-content w-full">
+        <div class="swiper highlightSwiper pb-40">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-1.png" alt="highlight-1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-2.png" alt="highlight-2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-3.png" alt="highlight-3" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-4.png" alt="highlight-4" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-5.png" alt="highlight-5" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- hack 2 -->
+    <div id="highlight-content-day-2" class="tc-highlight-content w-full">
+        <div class="swiper highlightSwiper pb-40">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-1.png" alt="highlight-1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-2.png" alt="highlight-2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-3.png" alt="highlight-3" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-4.png" alt="highlight-4" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-5.png" alt="highlight-5" />
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            
+        </div>
+    </div>
+    <!-- hack 3 -->
+    <div style="display: none;" id="highlight-content-day-3" class="tc-highlight-content w-full">
+        <div class="swiper highlightSwiper pb-40">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-1.png" alt="highlight-1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-2.png" alt="highlight-2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-3.png" alt="highlight-3" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-4.png" alt="highlight-4" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-5.png" alt="highlight-5" />
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            
+        </div>
+    </div>
+
+    <!-- hack 4 -->
+    <div style="display: none;" id="highlight-content-day-4" class="tc-highlight-content w-full">
+        <div class="swiper highlightSwiper pb-40">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-1.png" alt="highlight-1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-2.png" alt="highlight-2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-3.png" alt="highlight-3" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-4.png" alt="highlight-4" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-5.png" alt="highlight-5" />
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            
+        </div>
+    </div>
+
+
+    <!-- hack 5 -->
+    <div style="display: none;" id="highlight-content-day-5" class="tc-highlight-content w-full">
+        <div class="swiper highlightSwiper pb-40">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-1.png" alt="highlight-1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-2.png" alt="highlight-2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-3.png" alt="highlight-3" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-4.png" alt="highlight-4" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/techno-conference/highlight/highlight-5.png" alt="highlight-5" />
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <!-- Join -->
+    <div id="join" class="flex flex-col justify-center items-center text-cWhite gap-12 lg:gap-16 xl:gap-24 pt-24 md:pt-32 lg:pt-48 xl:pt-64">
+        <div class="tc-container">
+            <h1 class="tc-title leading-tight">WHY  <span
+            class="bg-tcBlue bg-clip-text text-[transparent]">YOU</span> SHOULD JOIN <span
+            class="bg-tcBlue bg-clip-text text-[transparent]">?</span> </h1></div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-0 w-full h-full">
+            <!-- Relasi -->
+            <div class="bg-relasiBackground flex flex-row md:flex-col justify-center items-center w-full h-32 rounded-xl px-4 md:px-0 md:rounded-none md:w-1/4 md:h-[400px] lg:h-[689px] gap-8 group hover:opacity-60 transition delay-150 duration-300 ease-in-out lg:opacity-100 md:opacity-60">
+                <div class="font-YSDarkBold text-cWhite md:text-4xl xl:text-5xl opacity-0 lg:opacity-100 group-hover:opacity-0 transition-all duration-500 hidden lg:block">
+                    Relasi
+                </div>
+                <img src="./assets/hackathon/relasi-icon.svg" class="w-14 h-10 lg:w-[200px] lg:h-[150px] xl:w-[226px] xl:h-[180px] md:-translate-y-2 md:w-20 md:h-12 lg:group-hover:-translate-y-72 transition-all duration-500 lg:group-hover:w-40 lg:group-hover:h-32 z-20 ease-in-out">
+                <div class="lg:absolute font-YSDarkRegular text-cWhite lg:text-2xl opacity-100 lg:opacity-0 group-hover:opacity-100 transition delay-150 duration-300 ease-in-out text-center lg:px-6 md:text-base md:px-2 text-sm lg:group-hover:-translate-y-10 2xl:group-hover:-translate-y-20">
+                    Kamu berkesempatan untuk menjalin <span class="font-YSDarkBold">relasi</span> secara online dengan peserta, mentor, dan juri Hackathon 6.0.
+                </div>
+            </div>
+            <!-- Mentoring -->
+            <div class="relative bg-mentoringBackground flex flex-row-reverse md:flex-col justify-center items-center w-full h-32 rounded-xl px-4 md:px-0 md:rounded-none md:w-1/4 md:h-[400px] lg:h-[689px] gap-8 group hover:opacity-60 transition delay-150 duration-300 ease-in-out lg:opacity-100 md:opacity-60">
+                <div class="font-YSDarkBold text-cWhite md:text-4xl xl:text-5xl opacity-0 lg:opacity-100 group-hover:opacity-0 transition-all duration-500 hidden lg:block">
+                    Mentoring
+                </div>
+                <img src="./assets/hackathon/mentoring-icon.svg" class="w-14 h-10 lg:w-[200px] lg:h-[150px] xl:w-[226px] xl:h-[180px] md:-translate-y-2 md:w-20 md:h-12 lg:group-hover:-translate-y-72 transition-all duration-500 lg:group-hover:w-40 lg:group-hover:h-32 z-20 ease-in-out">
+                <div class="lg:absolute font-YSDarkRegular text-cWhite lg:text-2xl opacity-100 lg:opacity-0 group-hover:opacity-100 transition delay-150 duration-300 ease-in-out text-center lg:px-6 md:text-base md:px-2 text-sm lg:group-hover:translate-y-12 xl:group-hover:-translate-y-4">
+                    Kamu berkesempatan <span class="font-YSDarkBold">melakukan mentoring</span> bisnis, desain, dan teknologi langsung dari orang-orang yang <span class="font-YSDarkBold">berpengalaman</span> di bidang IT serta memberikan masukan tentang proyekmu.
+                </div>
+            </div>
+            <!-- Keterampilan -->
+            <div class="relative bg-keterampilanBackgrouond flex flex-row md:flex-col justify-center items-center w-full h-32 rounded-xl px-4 md:px-0 md:rounded-none md:w-1/4 md:h-[400px] lg:h-[689px] gap-8 group hover:opacity-60 transition delay-150 duration-300 ease-in-out lg:opacity-100 md:opacity-60">
+                <div class="font-YSDarkBold text-cWhite md:text-4xl xl:text-5xl opacity-0 lg:opacity-100 group-hover:opacity-0 transition-all duration-300 hidden lg:block">
+                    Keterampilan
+                </div>
+                <img src="./assets/hackathon/keterampilan-icon.svg" class="w-14 h-10 lg:w-[200px] lg:h-[150px] xl:w-[226px] xl:h-[180px] md:-translate-y-2 md:w-20 md:h-12 lg:group-hover:-translate-y-72 transition-all duration-500 lg:group-hover:w-40 lg:group-hover:h-32 z-20 ease-in-out">
+                <div class="lg:absolute font-YSDarkRegular text-cWhite lg:text-2xl opacity-100 lg:opacity-0 group-hover:opacity-100 transition delay-150 duration-300 ease-in-out text-center lg:px-6 md:text-base md:px-2 text-sm lg:group-hover:-translate-y-4 xl:group-hover:-translate-y-10">
+                    Perlombaan ini mendorongmu untuk <span class="font-YSDarkBold">mengembangkan keterampilan</span>. Selain itu, kamu dituntut untuk membuat produk inovatif berdasarkan kasus tertentu.
+                </div>
+            </div>
+            <!-- CV -->
+            <div class="bg-cvBackground flex flex-row-reverse md:flex-col justify-center items-center w-full h-32 rounded-xl px-4 md:px-0 md:rounded-none md:w-1/4 md:h-[400px] lg:h-[689px] gap-8 group hover:opacity-60 transition delay-150 duration-300 ease-in-out lg:opacity-100 md:opacity-60">
+                <div class="font-YSDarkBold text-cWhite md:text-4xl xl:text-5xl opacity-0 lg:opacity-100 group-hover:opacity-0 transition-all duration-300 hidden lg:block">
+                    CV
+                </div>
+                <img src="./assets/hackathon/cv-icon.svg" class="w-14 h-10 lg:w-[200px] lg:h-[150px] xl:w-[226px] xl:h-[180px] md:-translate-y-2 md:w-20 md:h-12 lg:group-hover:-translate-y-72 transition-all duration-500 lg:group-hover:w-40 lg:group-hover:h-32 z-20 ease-in-out">
+                <div class="lg:absolute font-YSDarkRegular text-cWhite lg:text-2xl opacity-100 lg:opacity-0 group-hover:opacity-100 transition delay-150 duration-300 ease-in-out text-center lg:px-6 md:text-base md:px-2 text-sm lg:group-hover:-translate-y-4 xl:group-hover:-translate-y-10">
+                    Hackathon 6.0 dapat <span class="font-YSDarkBold">meningkatkan CV</span> untuk para peserta karena telah menyelesaikan case study yang diberikan pada perlombaan ini.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ -->
+    <div
+        class="tc-container flex flex-col xl:flex-row justify-between items-start gap-8 xl:gap-44 py-16 md:py-24 lg:py-36 xl:py-40 text-cWhite">
+        <div class="flex flex-col justify-center items-start">
+            <img src="./assets/techno-conference/faq/question-mark.svg" alt="question marks"
+                class="w-28 md:w-36 lg:w-44 xl:w-auto">
+            <h1 class="tc-title leading-tight">FAQ</h1>
+            <h2 class="tc-subtitle leading-tight">Frequently Asked <br>Questions</h2>
+        </div>
+
+        <div class="w-full flex flex-col gap-12">
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-1" class="hack-faq-question" data-faq-question="1"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Apa saja persyaratan untuk berpartisipasi di Hackathon 6.0?
+                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="1">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="1">
+                    Peserta hanya dapat bergabung <b>dalam 1 tim</b>, baik secara individu maupun tim (setiap tim dapat beranggotakan <b>maksimal 4 orang</b>).
+                    <br>
+                    <br>
+                    Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun untuk memenuhi syarat.
+                    <br>
+                    <br>
+                    Peserta harus menyerahkan dokumen yang dibutuhkan pada halaman pendaftaran Hackathon, seperti:
+                    <ul>
+                        <li>CV (Curriculum Vitae)</li>
+                        <li>Portfolio (required, tetapi tidak wajib)</li>
+                        <li>Non-Binusian: KTP (KTP/SIM/dll)</li>
+                        <li>Binusian: Kartu Binusian (Kartu Flazz)</li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-2" class="hack-faq-question" data-faq-question="2"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Apakah Hackathon 6.0 gratis?
+                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="2">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="2">
+                    Biaya pendaftaran:
+                    <br>
+                       <b>Binusian</b> Rp. 175.000
+                       <br>
+                        <b>Non-Binusian:</b> Rp. 200.000
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-3" class="hack-faq-question" data-faq-question="3"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Kapan batas waktu pendaftaran?
+                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="3">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="3">
+                    <b>Batas akhir pendaftaran</b> 
+                    adalah 
+                    <b>Jumat, 16 Juli 2023.</b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-4" class="hack-faq-question" data-faq-question="4"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Bisakah saya bergabung dengan lebih dari satu tim?
+                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="4">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="4">
+                    Peserta hanya diperbolehkan <b>bergabung dalam satu tim.</b> Jika lebih dari satu tim, peserta tidak akan terdaftar sebagai peserta Hackathon 6.0.
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-5" class="hack-faq-question" data-faq-question="5"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Jika saya tidak memiliki dasar pemrograman atau desain, bolehkah saya berpartisipasi?                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="5">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="5">
+                    Peserta tanpa latar belakang pemrograman atau dasar-dasar coding dan desain <b>masih diperbolehkan untuk berpartisipasi</b> pada acara Hackathon. Namun, akan ada seleksi untuk menentukan tim yang akan lolos.
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-6" class="hack-faq-question" data-faq-question="6" onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Bagaimana jika para peserta sudah menyiapkan dan menggunakan source code sebelum acara dimulai?               
+                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow" class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="6">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="6">
+                    Bagi peserta yang menyiapkan dan menggunakan source code sebelum acara dimulai dan ikut berkompetisi, hal tersebut termasuk ke dalam pelanggaran. Jika peserta terbukti melakukan <b>pelanggaran,</b> maka peserta tersebut akan <b>didiskualifikasi.</b>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-7" class="hack-faq-question" data-faq-question="7"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Jika saya tidak memenuhi syarat atau tidak lolos seleksi untuk acara Hackathon 6.0, bagaimana dengan biaya pendaftaran saya?                </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="7">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="7">
+                    Kami akan mengembalikan <b>100%</b> biaya pendaftaran, jika peserta tidak memenuhi syarat atau tidak lolos seleksi untuk acara ini.
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-8" class="hack-faq-question" data-faq-question="8"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Jika saya memenuhi syarat untuk acara Hackathon 6.0, tetapi saya tidak ingin terus melanjutkan acara ini, bagaimana dengan biaya pendaftaran saya?                
+                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all rotate-180" data-faq-arrow="8">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="8">
+                    Kami tidak akan mengembalikan biaya pendaftaran bagi peserta yang tidak ingin melanjutkan acara ini, meskipun sudah memenuhi syarat untuk mengikuti acara ini.
+                </div>
+            </div>
+
+
+            <div class="w-full flex flex-col gap-2 xl:gap-4">
+                <div id="faq-9" class="hack-faq-question" data-faq-question="9"
+                    onclick="openFaq(this.dataset.faqQuestion)">
+                    <h2>
+                        Jika saya memiliki pertanyaan, siapa yang dapat saya hubungi?
+                    </h2>
+                    <img src="./assets/techno-conference/faq/icon-arrow.svg" alt="arrow"
+                        class="hack-faq-arrow w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 transition-all -rotate-180" data-faq-arrow="9">
+                </div>
+                <div class="tc-faq-answer hidden" data-faq-answer="9">
+                    <p>Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi <span
+                            class="font-YSDarkBold italic">contact person</span>
+                        kami:<br>
+                        <span class="font-YSDarkBold">Hanson</span><br>
+                        WA : 081398533025<br>
+                        ID LINE : ivanderhanson0105<br>
+                        <br>
+                        <span class="font-YSDarkBold">Audrey</span><br>
+                        WA : 085173171809<br>
+                        ID LINE : dreyelvia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Timeline -->
+    <div id="timeline"
+        class="tc-container flex flex-col justify-center items-center text-cWhite gap-8 lg:gap-16 xl:gap-20 mb-16">
+        <h1 class="tc-title leading-tight">TIMELINE</h1>
+        <img class="mb-44" src="./assets/hackathon/hack-timeline.png" alt="timeline">
+        <div
+            class="flex flex-col gap-8 lg:gap-10 xl:gap-12 justify-center items-center text-cWhite z-[2] w-full px-4 lg:px-8 xl:px-16">
+            <h1 class="leading-tight font-ABigDeal text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center ">OUR MENTORS
+            </h1>
+        </div>
+        <!-- Tab -->
+        <div
+            class="font-YSDarkMedium max-w-[800px] w-full flex justify-center items-center gap-8 lg:gap-12 xl:gap-16">
+            <span id="timeline-tab-day-1" class="tc-timeline-tab">
+                Business
+            </span>
+            <span id="timeline-tab-day-2" class="tc-timeline-tab hack-timeline-tab-active">
+                Design
+            </span>
+            <span id="timeline-tab-day-3" class="tc-timeline-tab">
+                Technology
+            </span>
+        </div>
+        <!-- Business -->
+        <div style="display: none;" id="timeline-content-day-1" class="tc-timeline-content w-full">
+            <div class="swiper speakerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative w-full">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev -mt-12 w-8 scale-75 sm:scale-[0.8] md:scale-[0.85] lg:scale-90 xl:scale-95 2xl:scale-100 sm:ml-[15%] md:ml-[20%] lg:ml-[25%] xl:ml-[30%] 2xl:ml-[32%]"></div>
+                <div class="swiper-button-next -mt-12 w-4 scale-75 sm:scale-[0.8] md:scale-[0.85] lg:scale-90 xl:scale-95 2xl:scale-100 sm:mr-[15%] md:mr-[20%] lg:mr-[25%] xl:mr-[30%] 2xl:mr-[32%]"></div>
+            </div>
+        </div>
+        <!-- Design -->
+        <div id="timeline-content-day-2" class="tc-timeline-content w-full">
+            <div class="swiper speakerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev -mt-12 w-8 scale-75 sm:scale-[0.8] md:scale-[0.85] lg:scale-90 xl:scale-95 2xl:scale-100 sm:ml-[15%] md:ml-[20%] lg:ml-[25%] xl:ml-[30%] 2xl:ml-[32%]"></div>
+                <div class="swiper-button-next -mt-12 w-4 scale-75 sm:scale-[0.8] md:scale-[0.85] lg:scale-90 xl:scale-95 2xl:scale-100 sm:mr-[15%] md:mr-[20%] lg:mr-[25%] xl:mr-[30%] 2xl:mr-[32%]"></div>
+            </div>
+        </div>
+        <!-- Technology -->
+        <div style="display: none;" id="timeline-content-day-3" class="tc-timeline-content w-full">
+            <div class="swiper speakerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="group text-cWhite">
+                            <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                                    src="./assets/hackathon/blob-2.svg" alt="blob-1">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                                    src="./assets/hackathon/blob-1.svg" alt="blob-2">
+                                <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                                    src="./assets/hackathon/blob-3.svg" alt="blob-3">
+                                <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                            </div>
+                            <div
+                                class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                                <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                                    ELON MUSK
+                                </h3>
+                                <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                                    CEO and chief engineer of SpaceX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev -mt-12 w-8 scale-75 sm:scale-[0.8] md:scale-[0.85] lg:scale-90 xl:scale-95 2xl:scale-100 sm:ml-[15%] md:ml-[20%] lg:ml-[25%] xl:ml-[30%] 2xl:ml-[32%]"></div>
+                <div class="swiper-button-next -mt-12 w-4 scale-75 sm:scale-[0.8] md:scale-[0.85] lg:scale-90 xl:scale-95 2xl:scale-100 sm:mr-[15%] md:mr-[20%] lg:mr-[25%] xl:mr-[30%] 2xl:mr-[32%]"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Jury -->
+    <div id="jury" class="tc-container flex flex-col justify-center items-center text-cWhite gap-8 lg:gap-16 xl:gap-20 pt-24 md:pt-32 mb-40">
+        <div
+            class="flex flex-col gap-8 lg:gap-10 xl:gap-12 justify-center items-center text-cWhite z-[2] w-full px-4 lg:px-8 xl:px-16">
+            <h1 class="leading-tight font-ABigDeal text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center">OUR JURIES
+            </h1>
+        </div>
+        <div class="flex flex-col md:flex-row w-full gap-8">
+            <div class="flex flex-col justify-center align-middle gap-4">
+                <h1 class="font-YSDarkBold text-cWhite text-5xl text-center">
+                    Design
+                </h1>
+                <div class="group text-cWhite">
+                    <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                        <!-- <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-1.svg" alt="blob-1">
+                        <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-2.svg" alt="blob-2">
+                        <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-3.svg" alt="blob-3"> -->
+                        <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                    </div>
+                    <div
+                        class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                        <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                            ELON MUSK
+                        </h3>
+                        <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                            CEO and chief engineer of SpaceX
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center align-middle gap-4">
+                <h1 class="font-YSDarkBold text-cWhite text-5xl text-center">
+                    Technology
+                </h1>
+                <div class="group text-cWhite">
+                    <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                        <!-- <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-1.svg" alt="blob-1">
+                        <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-2.svg" alt="blob-2">
+                        <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-3.svg" alt="blob-3"> -->
+                        <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                    </div>
+                    <div
+                        class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                        <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                            ELON MUSK
+                        </h3>
+                        <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                            CEO and chief engineer of SpaceX
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center align-middle gap-4">
+                <h1 class="font-YSDarkBold text-cWhite text-5xl text-center">
+                    Business
+                </h1>
+                <div class="group text-cWhite">
+                    <div class="border-4 border-tcBlue rounded-t-xl p-8 pb-0 relative">
+                        <!-- <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-28 group-hover:-translate-y-28 sm:group-hover:-translate-y-40 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-1.svg" alt="blob-1">
+                        <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:-translate-x-24 sm:group-hover:-translate-x-32 group-hover:-translate-y-48 sm:group-hover:-translate-y-64 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-2.svg" alt="blob-2">
+                        <img class="-z-10 absolute bottom-0 left-0 right-0 mx-auto group-hover:translate-x-24 sm:group-hover:translate-x-28 group-hover:-translate-y-40 sm:group-hover:-translate-y-56 transition-all duration-500"
+                            src="./assets/techno-conference/speaker/blob-3.svg" alt="blob-3"> -->
+                        <img class="" src="./assets/techno-conference/speaker/speaker-1.png" alt="speaker-1">
+                    </div>
+                    <div
+                        class="flex flex-col justify-center items-center bg-tcBlue rounded-b-xl px-4 py-4 lg:py-6 xl:py-8">
+                        <h3 class="font-ABigDeal leading-relaxed text-xl lg:text-3xl xl:text-4xl text-center">
+                            ELON MUSK
+                        </h3>
+                        <p class="leading-relaxed font-YSDarkReguler text-sm lg:text-base xl:text-lg text-center">
+                            CEO and chief engineer of SpaceX
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ticket and Share -->
+    <div
+        class="tc-container w-full flex flex-col md:flex-row justify-between 2xl:justify-center items-stretch text-cWhite font-ABigDeal gap-8 md:gap-0 2xl:gap-32 pb-8">
+        <div class="flex flex-col justify-center items-center gap-2">
+            <h1 class="text-5xl lg:text-6xl xl:text-7xl">GET YOUR</h1>
+            <h1 class="text-6xl lg:text-7xl xl:text-8xl">TICKET!</h1>
+            <a href="#" class="tc-button-blue md:w-full mt-1">Get Ticket!</a>
+        </div>
+        <div class="bg-cWhite h-2 md:h-auto md:w-2 rounded-full"></div>
+        <div class="flex flex-col justify-center items-center gap-2">
+            <h1 class="text-6xl lg:text-7xl xl:text-8xl">SHARE</h1>
+            <h1 class="text-2xl lg:text-3xl xl:text-4xl">TO YOUR FRIENDS!</h1>
+            <div class="flex justify-between items-center md:w-full mt-4 lg:mt-5 xl:mt-6 gap-8 md:gap-0">
+                <div class="flex justify-center items-center relative cursor-pointer"
+                    onclick="shareLink('instagram', this)" data-link="https://www.instagram.czom/technoscapebncc/">
+                    <img src="./assets/hackathon/instagram.svg" alt="instagram" class="tc-share-icon">
+                    <span class="hack-share-tooltip" id="instagram-tooltip">Link copied!</span>
+                </div>
+
+                <div class="flex justify-center items-center relative cursor-pointer"
+                    onclick="shareLink('facebook', this)"
+                    data-link="https://www.facebook.com/bina.nusantara.computer.club/?locale=id_ID">
+                    <img src="./assets/hackathon/facebook.svg" alt="facebook" class="tc-share-icon">
+                    <span class="hack-share-tooltip" id="facebook-tooltip">Link copied!</span>
+                </div>
+
+                <div class="flex justify-center items-center relative cursor-pointer"
+                    onclick="shareLink('twitter', this)" data-link="https://twitter.com/bncc_binus?lang=en">
+                    <img src="./assets/hackathon/twitter.svg" alt="twitter" class="tc-share-icon">
+                    <span class="hack-share-tooltip" id="twitter-tooltip">Link copied!</span>
+                </div>
+
+                <div class="flex justify-center items-center relative cursor-pointer"
+                    onclick="shareLink('linkedin', this)"
+                    data-link="https://www.linkedin.com/company/bina-nusantara-computer-club/">
+                    <img src="./assets/hackathon/linkedin.svg" alt="linkedin" class="tc-share-icon">
+                    <span class="hack-share-tooltip" id="linkedin-tooltip">Link copied!</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Popup -->
+    <div id="share-popup"
+        class="bg-tcLinearGradientWhiteRed w-full -top-32 fixed flex justify-between items-center gap-12 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 py-6 z-50 text-cWhite transition-all">
+        <p class="font-YSDarkMedium text-md lg:text-lg xl:text-xl">Link telah tersalin! Bagikan kepada
+            teman-temanmu!
+        </p>
+        <img id="share-x-btn" src="./assets/navbar/icon-x.svg" alt="x-button" class="cursor-pointer w-8">
+    </div>
+
+    <!-- Sponsors -->
+    <div id="sponsor"
+        class="tc-container flex flex-col justify-center items-center text-cWhite gap-8 lg:gap-16 xl:gap-20 py-24 md:py-32 lg:py-48 xl:py-64">
+        <h1 class="tc-title leading-tight">SPONSORS</h1>
+        <div
+            class="text-base sm:text-lg xl:text-xl text-center font-YSDarkBold bg-[#1b1b1b] shadow-[inset_0px_20px_40px_rgba(0,0,0,0.4)] flex flex-col justify-center items-center w-full gap-10 lg:gap-12 xl:gap-16 p-6 lg:p-12 xl:p-16 tracking-wider text-cWhite rounded-3xl">
+            <div class="sponsor-wrapper">
+                <p>Platinum Sponsor</p>
+                <div class="flex justify-center items-center flex-wrap gap-2">
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-platinum" />
+                </div>
+            </div>
+
+            <div class="sponsor-wrapper">
+                <p>Gold Sponsors</p>
+                <div class="flex justify-center items-center flex-wrap gap-6">
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-gold" />
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-gold" />
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-gold" />
+                </div>
+            </div>
+
+            <div class="sponsor-wrapper">
+                <p>Silver Sponsor</p>
+                <div class="flex justify-center items-center flex-wrap gap-4">
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-silver" />
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-silver" />
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-silver" />
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-silver" />
+                    <img src="./assets/logo/technoscape-logo.svg" alt="" class="sponsor-silver" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Media Partners -->
+    <div id="media-partner" class="text-cWhite gap-8 lg:gap-16 xl:gap-20 py-24 md:py-32 lg:py-48 xl:py-64">
+        <div class="tc-container w-full">
+            <h1 class="tc-title leading-tight">MEDIA PARTNERS</h1>
+        </div>
+        <div>
+            <div class="splide top mt-10 mb-12 lg:mb-4">
+                <div class="splide__track">
+                    <ul class="splide__list flex w-[30rem] md:w-[50rem] lg:w-[72rem]">
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/AMIKOM COMPUTER CLUB.png" alt="AMIKOM COMPUTER CLUB">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/BEM FTI UNTAR.png" alt="BEM FTI UNTAR">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/BINUS BADMINTON.png" alt="BINUS BADMINTON">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/BINUS English Club.png" alt="BINUS English Club">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/BINUS GAME DEVELOPMENT CLUB.png"
+                                alt="BINUS GAEM DEVELOPMENT">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/BINUS Mandarin Club.png" alt="BINUS Mandarin Club">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Binus Student Learning Community.png"
+                                alt="BINUS Student Learning Community">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/CEDS UI.png" alt="CEDS UI">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMAKOM UGM.png" alt="HIMAKOM UGM">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMATIF STT Bandung.png" alt="HIMATIF STT Bandung">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMATIFA UPN Veteran JATIM.png"
+                                alt="HIMATIFA UPN Veteran JATIM">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMIT PENS.PNG"
+                                alt="HIMIT PENS">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMSTAT BINUS University.png"
+                                alt="HIMSTAT BINUS University">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMTI BINUS.png"
+                                alt="HIMTI BINUS">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMTI UNAS.png" alt="HIMTI UNAS">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMTI UNITAMA.png" alt="HIMTI UNITAMA">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HIMTIKA UNSIKA.png" alt="HIMTIKA UNSIKA">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMIF UMN.png" alt="HMIF UMN">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMIF UNSRI.png" alt="HMIF UNSRI">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMIF USK.png" alt="HMIF USK">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMIT UIN Sunan Kalijaga.png" alt="HMIT UIN Sunan Kalijaga">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMJ Teknik Informatika UNDIKSHA.png"
+                                alt="HMJ Teknik Informatika UNDIKSHA">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMP-S1-TI-UKSW.png" alt="HMP-S1-TI-UKSW">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMPSTIF UNPAR.png" alt="HMPSTIF UNPAR">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="splide bot lg:mt-16">
+                <div class="splide__track">
+                    <ul class="splide__list flex w-[30rem] md:w-[50rem] lg:w-[72rem]">
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMSI ITK.png" alt="HMSI ITK">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMSI UKDW.png" alt="HMSI UKDW">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/HMTI FTS UMP.png" alt="HMTI FTS UMP">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/KLIFONARA.png" alt="KLIFONARA">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/KMB Dhammavaddhana BINUS.png" alt="KMB Dhammavaddhana BINUS">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/KMK BINUS.png" alt="KMK BINUS">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Coding.ID.png" alt="Coding ID">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Dari Event.jpg" alt="Dari Event">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Event Jakarta.png" alt="Event Jakarta">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Info Kerja Bekasi.JPG" alt="Info Kerja Bekasi">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Mading Event.png" alt="Mading Event">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Malasngoding.png" alt="Malasngoding">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Media Event.png" alt="Media Event">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Padang Android Dev Community.png"
+                                alt="Padang Android Dev Community">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/logo PRFM BARU-02.png"
+                                alt="PRFM BARU">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Progate Secondary.png" alt="Progate">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Seputar Seminar.png" alt="Seputar Seminar">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo Tahungoding.png" alt="Tahungoding">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Logo xaisyndicate.png" alt="xaisyndicate">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/Nippon Club BINUS.png" alt="Nippon Club BINUS">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/OmahTI UGM.png" alt="OmahTI UGM">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/UKM Band Bina Nusantara.png" alt="UKM Band Bina Nusantara">
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="./assets/media-partner/UKM TRIPLE-C.png" alt="UKM TRIPLE-C">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us + Footer -->
+    <div class="bg-cLinearGradientBg">
+        <!-- Contact Us -->
+        <div id="join-us"
+            class="tc-container flex flex-col justify-center items-center text-cWhite gap-8 lg:gap-16 xl:gap-20 py-24 md:py-32 lg:py-48 xl:py-64">
+            <div
+                class="flex flex-col justify-center items-start gap-4 w-full bg-[url('/public/assets/hackathon/Hackathon-contactUs.png')] bg-[length:100%_100%] bg-no-repeat px-8 lg:px-12 xl:px-16 py-12 lg:py-24 xl:py-32">
+                <h1
+                    class="font-ABigDeal leading-relaxed text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl xl:w-3/4">
+                    JOIN OUR EVENT!</h1>
+                <div class="flex justify-start items-center gap-8 flex-wrap mt-2">
+                    <button class="tc-button-blue" onclick="openContactPopup()">Register Here</button>
+                    <button class="tc-button-blue" onclick="openContactPopup()">Guidebook</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before Footer -->
+        <div class="lg:mx-12 mx-8 ml-7 lg:mt-40 mt-20 text-cWhite flex flex-col items-center font-YSDarkRegular">
+            <div
+                class="flex flex-col-reverse text-center lg:text-left lg:flex-row justify-between my-10 lg:ml-14 w-full">
+                <!-- Left / Bottom -->
+                <div class="flex flex-col md:flex-row lg:justify-start md:justify-evenly justify-start text-left">
+                    <div class="mb-10 md:mb-0 lg:mr-10 mr-0">
+                        <p class="mb-4 text-center md:text-left text-xs md:text-base">
+                            Organized By
+                        </p>
+                        <img src="./assets/logo/bncc-black-bg.png" alt="Bina Nusantara Computer Club"
+                            class="mx-auto md:mx-0 lg:w-64 w-24" />
+                    </div>
+                    <div
+                        class="flex justify-around items-center lg:flex-col lg:w-full md:w-[70%] w-full lg:-ml-4 md:ml-0 ml-0 lg:space-y-8">
+                        <div class="space-y-3">
+                            <p class="lg:w-max w-full text-[9px] md:text-sm lg:text-base text-center">
+                                Official Learning Partner of
+                            </p>
+                            <img src="./assets/logo/gojek.svg" alt="Gojek" class="lg:w-2/3 md:w-48 w-32 pt-2" />
+                        </div>
+                        <div class="space-y-3">
+                            <p class="lg:w-max w-full text-[9px] md:text-sm lg:text-base text-center">
+                                Official Empowering Affiliate of
+                            </p>
+                            <img src="./assets/logo/tiket.svg" alt="tiket.com" class="lg:w-2/3 md:w-44 w-32 pt-1" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Right / Top -->
+                <div class="lg:w-2/5 flex flex-col lg:items-start items-center lg:gap-16 gap-10">
+                    <div>
+                        <p class="lg:text-lg text-xs mb-4">
+                            Subscribe to <b>TechnoScape</b>
+                        </p>
+                        <form action="" method="POST" class="flex justify-center my-1 lg:my-0 lg:justify-end">
+                            <input type="email" name="email" id="input-email" placeholder="Masukkan Email Anda"
+                                class="bg-cWhite text-[#595959] bsInput text-sm md:text-base py-3 pl-3 pr-7 lg:w-72 md:w-72 w-52 lg:pl-4 lg:pr-3 rounded-l-3xl my-2 shadow-input" />
+                            <div class="bg-tcLinearGradientBlue bg-[length:200%_100%] hover:bg-[100%_0] transition-all duration-500 font-YSDarkSemiBold text-cWhite text-xs md:text-base h-fit my-auto lg:py-3 py-[14px] px-6 rounded-r-3xl hover:ease-in-out cursor-pointer"
+                                id="subscribe">
+                                Subscribe
+                            </div>
+                        </form>
+                    </div>
+                    <div class="flex justify-center items-center lg:justify-end space-x-6 md:space-x-8 mb-10 lg:mb-0">
+                        <a href="https://medium.com/technoscape-bncc"
+                            class="filter brightness-0 invert hover:filter-none transition-all">
+                            <img src="./assets/hackathon/medium.svg" alt="medium">
+                        </a>
+                        <a href="https://www.instagram.com/technoscapebncc/"
+                            class="filter brightness-0 invert hover:filter-none transition-all">
+                            <img src="./assets/hackathon/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/bina.nusantara.computer.club/?locale=id_ID"
+                            class="filter brightness-0 invert hover:filter-none transition-all">
+                            <img src="./assets/hackathon/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://twitter.com/bncc_binus?lang=en"
+                            class="filter brightness-0 invert hover:filter-none transition-all">
+                            <img src="./assets/hackathon/twitter.svg" alt="twiiter">
+                        </a>
+                        <a href="https://www.linkedin.com/company/bina-nusantara-computer-club/"
+                            class="filter brightness-0 invert hover:filter-none transition-all">
+                            <img src="./assets/hackathon/linkedin.svg" alt="linkedin">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer
+            class="flex flex-col-reverse sm:flex-row md:flex-row justify-between bg-cWhite bg-opacity-10 text-cWhite text-center font-YSDarkMedium px-0 md:px-10 lg:px-20 py-4 lg:mx-10 rounded-t-full text-[0.6rem] lg:text-sm md:text-xs">
+            <p>All Rights Reserved BNCC 2023 © Bina Nusantara Computer Club</p>
+            <p class="mb-2 md:mb-0">
+                <a href="./privacy_policy.html">Privacy Policy</a> &
+                <a href="./terms_and_conditions.html">Terms of Service</a>
+            </p>
+        </footer>
+    </div>
+
+
+    <!-- Scripts -->
+    <script type="importmap-shim" src="./js/base/esm-maps.json"></script>
+    <script type="module-shim">
+        import HaloIora from './js/base/tc-halo-iora.js';
+
+        window.HaloIora = HaloIora;
+
+        var iora1 = new HaloIora({alpha:true, antialias:true, container:$("#mascot-1")});
+        var iora2 = new HaloIora({alpha:true, antialias:true, container:$("#mascot-2")});
+
+        iora1.setPixelRatio(window.devicePixelRatio);
+        iora2.setPixelRatio(window.devicePixelRatio);
+
+        window.iora1 = iora1;
+        window.iora2 = iora2;
+    </script>
+    <script src="js/hackathon.js"></script>
+</body>
+
+</html>
