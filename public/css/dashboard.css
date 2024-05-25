@@ -1,0 +1,39 @@
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 14px;
+    gap: 10px;
+}
+
+.nav-border{
+    border-right-color: rgba(255, 255, 255, 0.4);
+    width: 15rem;
+}
+
+
+.bg-cWhite{
+    width: 667px;
+    height: 625px;
+}
+
+.box{
+    background: rgba(244, 244, 244, 0.1);
+    border-radius: 32px;
+}
+
+.icon-profile{
+    width: 26px;
+}
+
+.ukuran_box{
+    width: 560px;
+}
+
+.task_click{
+    background: rgba(244, 244, 244, 0.1);
+}
+
+.btn_width{
+    width: 190px;
+}

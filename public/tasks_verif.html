@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TechnoScape 2023</title>
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/favicon.png"
+            type="image/x-icon"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="./css/base/base.css" />
+        <link rel="stylesheet" href="./css/base/build.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/tasks.css" />
+        <link rel="stylesheet" href="./css/dashboard-schedule.css">
+
+        <!-- javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./js/tasks.js"></script>
+    </head>
+    <body class="bg-cLinearGradientBg">
+        <div>
+            <!-- Side Navbar -->
+            <nav
+            class="fixed top-0 left-0 text-cWhite bg-[#000000] font-YSDarkMedium xl:w-[275px] lg:w-[250px] md:w-[200px] w-[75px] border-r-2 border-[#FFFFFF66] h-screen lg:p-8 md:p-5 p-3 flex flex-col justify-between items-center"
+        >
+            <img
+                class="w-full lg:p-0 md:p-4 md:block hidden"
+                src="./assets/logo/technoscape-logo.svg"
+                alt=""
+            />
+            <img
+                class="md:hidden"
+                src="./assets/logo/technoscape-logo-no-text.svg"
+                alt=""
+            />
+            <ul
+                class="w-full flex flex-col xl:pb-72 lg:pb-48 md:pb-[500px] pb-72 xl:gap-5 lg:gap-2 gap-5 xl:text-xl lg:text-lg md:text-base"
+            >
+                <a href=""
+                    ><li
+                        class="hover:bg-cGrey hover:rounded-2xl transition-all duration-300 ease-in-out cursor-pointer"
+                    >
+                        <img
+                            class="lg:w-8 lg:h-8 md:w-5 md:h-5"
+                            src="./assets/icon/icon-home.svg"
+                            alt=""
+                        /><span class="hidden md:block">Home</span>
+                    </li>
+                </a>
+                <a href="">
+                    <li
+                        class="hover:bg-cGrey hover:rounded-2xl transition-all duration-300 ease-in-out cursor-pointer"
+                    >
+                        <img
+                            class="lg:w-8 lg:h-8 md:w-5 md:h-5"
+                            src="./assets/icon/icon-announcement.svg"
+                            alt=""
+                        />
+                        <span class="hidden md:block">Announcement</span>
+                    </li>
+                </a>
+                <a href="">
+                    <li
+                        class="hover:bg-cGrey hover:rounded-2xl transition-all duration-300 ease-in-out cursor-pointer"
+                    >
+                        <img
+                            class="lg:w-8 lg:h-8 md:w-5 md:h-5"
+                            src="./assets/icon/icon-schedule.svg"
+                            alt=""
+                        />
+                        <span class="hidden md:block">Schedule</span>
+                    </li>
+                </a>
+                <a href="tasks.html"
+                    class="bg-cGrey rounded-2xl cursor-pointer"
+                    ><li
+                    >
+                        <img
+                            class="lg:w-8 lg:h-8 md:w-5 md:h-5"
+                            src="./assets/icon/icon-tasks.svg"
+                            alt=""
+                        />
+                        <span class="hidden md:block">Tasks</span>
+                    </li></a
+                >
+            </ul>
+            <div
+                class="absolute md:w-[76%] w-[70%] md:bottom-9 bottom-3 flex flex-col items-center md:gap-5 gap-3"
+            >
+                <div
+                    class="w-full flex justify-between items-center lg:gap-5 md:gap-3 gap-2 cursor-pointer"
+                    id="accordion"
+                >
+                    <img
+                        class="lg:w-8 lg:h-8 w-5 h-5"
+                        src="./assets/icon/icon-user.svg"
+                        alt=""
+                    />
+                    <p
+                        class="font-YSDarkSemiBold xl:text-xl lg:text-lg md:text-base hidden md:inline-block whitespace-nowrap overflow-hidden text-ellipsis"
+                    >
+                        Kim Minji
+                    </p>
+                    <img
+                        class="lg:w-5 lg:h-5 w-3 h-3"
+                        id="arrow"
+                        src="./assets/icon/icon-arrow.svg"
+                        alt=""
+                    />
+                </div>
+                <ul
+                    class="w-full flex flex-col xl:gap-5 lg:gap-2 xl:text-xl lg:text-lg md:text-base hidden"
+                    id="user-profile"
+                >
+                    <a href="profile.html">
+                        <li class="hover:bg-cGrey hover:rounded-2xl transition-all duration-300 ease-in-out cursor-pointer">
+                            <img
+                                class="lg:w-8 lg:h-8 md:w-5 md:h-5"
+                                src="./assets/icon/icon-profile.svg"
+                                alt=""
+                            />
+                            <span class="hidden md:block">Profile</span>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li
+                            class="xl:mt-5 lg:mt-2 md:mt-5 -ml-1 lg:pb-3 md:pb-5 hover:bg-cGrey hover:rounded-2xl transition-all duration-300 ease-in-out cursor-pointer"
+                        >
+                            <img
+                                class="lg:w-8 lg:h-8 md:w-5 md:h-5"
+                                src="./assets/icon/icon-logout.svg"
+                                alt=""
+                            />
+                            <span class="ml-1 -mt-1 hidden md:block"
+                                >Log Out</span
+                            >
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+
+            <!-- Tasks -->
+            <section class="text-cWhite xl:p-16 lg:p-7 p-5 mt-7 xl:pl-[350px] lg:pl-[275px] md:pl-56 pl-24">
+                <h1 class="font-ABigDeal xl:text-5xl lg:text-4xl md:text-3xl text-xl">Tasks</h1>
+                <div class="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 grid-rows-2 gap-10 mt-10">
+                    <div
+                        class="bg-cGrey col-span-2 row-span-3 rounded-3xl p-5 h-fit"
+                    >
+                        <div
+                            class="p-1 bg-gradient-to-r from-cRed3 to-cRed2 rounded-3xl"
+                        >
+                            <div
+                                class="md:p-[2rem] p-[1.5rem] p-1 bg-cLinearGradientBg rounded-3xl"
+                            >
+                                <!-- isi konten -->
+                                <h1
+                                    class="font-ABigDeal md:text-2xl text-[18px] bg-gradient-to-r from-cRed3 to-cRed2 text-transparent bg-clip-text"
+                                >
+                                    Techno Conference
+                                </h1>
+                                <!-- reject -->
+                                <div class="flex flex-row justify-center item-center gap-3 mt-3">
+                                    <img class="md:w-6 w-5" src="./assets/icon/icon-check.svg" alt="">
+                                    <p class="font-YSDarkBold md:text-xl text-[18px] bg-gradient-to-r from-cGreen3 to-cGreen2 text-transparent bg-clip-text">Verified</p>
+                                </div>
+
+                                <p class="text-center md:text-[17px] text-[14px] mt-4">
+                                    Pendaftaran Anda berhasil diverifikasi! <br>
+                                    Jangan lupa untuk bergabung ke dalam grup Whatsapp.
+                                </p>
+                                
+                                <div class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[216px] w-[180px] md:h-[48px] mt-[60px] bg-cLinearGradientBtnRed bg-[length:200%_100%] hover:bg-[100%_0] transition-all duration-500 lg:px-8 md:px-6 px-4 md:py-3 md:pb-4 py-[10px] rounded-3xl text-cWhite  md:font-YSDarkExtraBold font-YSDarkBold tracking-wide hover:shadow-bsRedBtn ease-in-out cursor-pointer flex justify-center items-center text-center">
+                                    <a class="md:text-[16px] text-[14px]" href="#">View Payment Page</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div
+                            class="p-1 bg-gradient-to-r from-cYellow2 to-cYellow3 rounded-3xl mt-10"
+                        >
+                            <div
+                                class="md:p-[2rem] p-[1.5rem] p-1 bg-cLinearGradientBg rounded-3xl"
+                            >
+                                <h1
+                                    class="font-ABigDeal md:text-2xl text-[18px] bg-gradient-to-r from-cYellow2 to-cYellow3 text-transparent bg-clip-text"
+                                >
+                                    Techno Academy
+                                </h1>
+                                <!-- reject -->
+                                <div class="flex flex-row justify-center item-center gap-3 mt-3">
+                                    <img class="md:w-6" src="./assets/icon/icon-check.svg" alt="">
+                                    <p class="font-YSDarkBold md:text-xl text-[18px] bg-gradient-to-r from-cGreen3 to-cGreen2 text-transparent bg-clip-text">Verified</p>
+                                </div>
+
+                                <p class="text-center md:text-[17px] text-[14px] mt-4">
+                                    Pendaftaran Anda berhasil diverifikasi! <br>
+                                    Jangan lupa untuk bergabung ke dalam grup Whatsapp.
+                                </p>
+                                
+                                
+                                <!-- tombol btn -->
+                                <div class="flex md:flex-row flex-col items-center gap-4 justify-center relative">
+                                    <div class="relative  w-[180px] md:w-[216px] md:h-[48px] mt-[50px] md:mt-10 bg-cLinearGradientBtnYellow bg-[length:200%_100%] hover:bg-[100%_0] transition-all duration-500 lg:px-8 md:px-6 px-4 md:py-3 md:pb-4 py-[10px] rounded-3xl text-cBlack font-YSDarkExtraBold tracking-wide hover:shadow-bsYellowBtn ease-in-out cursor-pointer flex justify-center items-center text-center">
+                                        <a class="md:text-[16px] text-[14px]" href="#">View Payment Page</a>
+                                    </div>
+
+
+                                    <div
+                                    class="relative mt-0 md:mt-10 overflow-hidden lg:text-xl md:text-base text-[14px] bg-cBlack border-2 border-cYellow md:w-32 w-[180px] md:h-12 h-[41px] rounded-3xl text-cYellow font-YSDarkExtraBold tracking-wide hover:shadow-bsYellowBtn ease-in-out cursor-pointer flex justify-center items-center text-center py-[10px]"
+                                    >
+                                        <a
+                                            class="lg:text-[17px] text-14px font-YSDarkExtraBold absolute md:w-32 px-1 sm:py-2 py-[6px]  text-center items-center justify-center"
+                                            href=""
+                                        >
+                                            View CV
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div
+                            class=" p-1 bg-gradient-to-r from-cBlue2 to-cBlue3 rounded-3xl mt-10"
+                        >
+                        <div
+                            class="md:p-[2rem] p-[1.5rem] p-1 bg-cLinearGradientBg rounded-3xl"
+                        >
+                            <h1
+                                class="font-ABigDeal md:text-2xl text-[18px] bg-gradient-to-r from-cBlue2 to-cBlue3 text-transparent bg-clip-text"
+                            >
+                                Hackathon 6.0
+                            </h1>
+                                <!-- reject -->
+                                <div class="flex flex-row justify-center item-center gap-3 mt-3">
+                                    <img class="md:w-6" src="./assets/icon/icon-check.svg" alt="">
+                                    <p class="font-YSDarkBold md:text-xl text-[18px] bg-gradient-to-r from-cGreen3 to-cGreen2 text-transparent bg-clip-text">Verified</p>
+                                </div>
+
+                                <p class="text-center md:text-[17px] text-[14px] mt-4">
+                                    Pendaftaran Anda berhasil diverifikasi! <br>
+                                    Jangan lupa untuk bergabung ke dalam grup Whatsapp.
+                                </p>
+                                <!-- tombol btn -->
+                                <div class="flex md:flex-row flex-col items-center gap-4 justify-center relative">
+                                    <div class="relative  w-[180px] md:w-[216px] md:h-[48px] mt-[60px] md:mt-10 bg-cLinearGradientBtnBlue bg-[length:200%_100%] hover:bg-[100%_0] transition-all duration-500 lg:px-8 md:px-6 px-4 md:py-3 md:pb-4 py-[10px] rounded-3xl text-cWhite font-YSDarkExtraBold tracking-wide hover:shadow-bsBlueBtn ease-in-out cursor-pointer flex justify-center items-center text-center">
+                                        <a class="md:text-[16px] text-[14px]" href="#">View Payment Page</a>
+                                    </div>
+
+
+                                    <div
+                                    class="relative mt-0 md:mt-10 overflow-hidden lg:text-xl md:text-base text-[14px] bg-cBlack border-2  border-cBlue2  md:w-32 w-[180px] md:h-12 h-[41px] rounded-3xl text-cBlue2 font-YSDarkExtraBold tracking-wide hover:shadow-bsBlueBtn ease-in-out cursor-pointer flex justify-center items-center text-center py-[10px]"
+                                    >
+                                        <a
+                                            class="lg:text-[17px] text-14px font-YSDarkExtraBold absolute md:w-32 px-1 sm:py-2 py-[6px]  text-center items-center justify-center"
+                                            href=""
+                                        >
+                                            View CV
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightGrid">
+                    <div class="calendarGrid bg-cLinearGradientBg rounded-3xl border-4 border-cWhite">
+                        <div class="container">
+                            <div class="calendar">
+                                <div class="month px-10 py-6">
+                                    <img class="prev" src="./assets/icon/icon-arrow-left.svg" alt="">
+                                    <div class="date">
+                                        <h1
+                                            class="text-cWhite text-base font-YSDarkBold"
+                                        ></h1>
+                                        <p></p>
+                                    </div>
+                                    <img class="next" src="./assets/icon/icon-arrow-right.svg" alt="">
+                                </div>
+                                <div class="weekdays text-sm font-YSDarkRegular">
+                                    <div>SUN</div>
+                                    <div>MON</div>
+                                    <div>TUE</div>
+                                    <div>WED</div>
+                                    <div>THU</div>
+                                    <div>FRI</div>
+                                    <div>SAT</div>
+                                </div>
+                                <div class="days pb-5 text-sm font-YSDarkRegular"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 bg-cLinearGradientBg rounded-3xl border-2 border-cWhite p-5">
+                        <div class="text-center text-xl font-YSDarkBold mb-3 h-fit">Upcoming tasks</div>
+                    <!-- kotak abu -->
+                        <div class="flex flex-col rounded-3xl bg-cGrey py-4 px-6">
+                            <div class="flex justify-between items-center">
+                                <div class="text-xl font-YSDarkMedium">21 June</div>
+                                <div class="text-base font-YSDarkMedium">11/20-13.00</div>
+                            </div>
+                            <div class="text-center text-xl font-YSDarkExtraBold bg-cLinearGradientRed text-transparent bg-clip-text">Techno Conference</div>
+                            <div class="text-xs text-center my-2">Navigate Digital Changes to Expand Future Opportunities</div>
+                            <a href=""><div class="bg-cLinearGradientBtnRed rounded-xl text-center py-1 font-YSDarkSemiBold mt-2">Join Now</div></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="./js/dashboard-schedule.js"></script>
+    </body>
+</html>

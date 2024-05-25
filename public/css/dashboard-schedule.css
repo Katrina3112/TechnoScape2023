@@ -1,0 +1,141 @@
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 14px;
+    gap: 10px;
+}
+
+.ukuran_font {
+    font-size: 12px;
+}
+
+.nav-border {
+    border-right-color: rgba(255, 255, 255, 0.4);
+    width: 15rem;
+}
+
+.bg-cWhite {
+    width: 667px;
+    height: 625px;
+}
+
+.box {
+    background: rgba(244, 244, 244, 0.1);
+    border-radius: 32px;
+}
+
+.icon-profile {
+    width: 26px;
+}
+
+.ukuran_box {
+    width: 560px;
+}
+
+.task_click {
+    background: rgba(244, 244, 244, 0.1);
+}
+
+/* Calendar */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    width: 19rem;
+    height: auto;
+}
+
+.month {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.month h1 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.month p {
+    font-size: 10px;
+}
+
+.weekdays {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div {
+    font-size: 12px;
+    color: #f4f4f4;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days div {
+    font-size: 14px;
+    color: #f4f4f4;
+    margin: 6.5px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days div:hover:not(.today) {
+    background: radial-gradient(
+                763.89% 1810.97% at -18.02% 50%,
+                #010101 0%,
+                #454545 100%
+            )
+            padding-box,
+        linear-gradient(188.09deg, #8be1f5 4.98%, #acefff 4.99%, #42dbff 93.78%)
+            border-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background: radial-gradient(
+                763.89% 1810.97% at -18.02% 50%,
+                #010101 0%,
+                #454545 100%
+            )
+            padding-box,
+        linear-gradient(188.09deg, #8be1f5 4.98%, #acefff 4.99%, #42dbff 93.78%)
+            border-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 1300px) {
+    .days div {
+        margin: 10px;
+    }
+}

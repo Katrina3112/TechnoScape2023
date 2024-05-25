@@ -1,0 +1,7 @@
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 14px;
+    gap: 10px;
+}
